@@ -1,0 +1,46 @@
+/* CloudForge deployments dashboard (dark) — from ui_kits/dashboard */
+.app{display:grid;grid-template-columns:var(--sidebar-w) 1fr;height:100vh;width:100%}
+.app a{color:var(--text-accent);text-decoration:none}
+.app a:hover{color:var(--accent-hover)}
+.side{background:var(--bg-inset);border-right:1px solid var(--border-subtle);display:flex;flex-direction:column;padding:16px 12px}
+.side__brand{display:flex;align-items:center;gap:9px;font-family:var(--font-display);font-weight:800;font-size:17px;letter-spacing:-0.03em;padding:6px 8px 18px}
+.side__brand b{color:var(--accent)}
+.navsec{font-family:var(--font-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-faint);padding:14px 10px 6px}
+.navitem{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:var(--radius-md);color:var(--text-muted);font-size:13.5px;font-weight:500;cursor:pointer}
+.navitem:hover{background:var(--bg-hover);color:var(--text-primary)}
+.navitem[data-active="true"]{background:var(--accent-subtle);color:var(--text-accent)}
+.navitem svg{width:17px;height:17px}
+.main{display:flex;flex-direction:column;overflow:hidden}
+.top{height:var(--topbar-h);border-bottom:1px solid var(--border-subtle);display:flex;align-items:center;gap:16px;padding:0 24px;flex:none}
+.crumb{font-family:var(--font-mono);font-size:13px;color:var(--text-muted)}
+.crumb b{color:var(--text-primary)}
+.top__r{margin-left:auto;display:flex;align-items:center;gap:12px}
+.avatar{width:30px;height:30px;border-radius:50%;background:var(--accent);color:var(--accent-fg);display:grid;place-items:center;font-family:var(--font-mono);font-weight:700;font-size:12px}
+.content{padding:28px 32px;overflow:auto;flex:1}
+.h1{font-family:var(--font-display);font-weight:700;font-size:26px;letter-spacing:-0.03em;margin:0}
+.sub{color:var(--text-muted);font-size:14px;margin:6px 0 0}
+.deps{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.dep{display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;gap:18px;background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:16px 20px;cursor:pointer;transition:border-color .18s}
+.dep:hover{border-color:var(--border-strong)}
+.dep__name{font-family:var(--font-display);font-weight:600;font-size:15px}
+.dep__meta{font-family:var(--font-mono);font-size:12px;color:var(--text-faint);margin-top:3px}
+.dep__branch{font-family:var(--font-mono);font-size:12px;color:var(--text-muted)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.stat{background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:18px 20px}
+.stat__k{font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-faint)}
+.stat__v{font-family:var(--font-display);font-weight:700;font-size:26px;margin-top:8px;letter-spacing:-0.02em}
+.term{background:var(--term-bg);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:18px 20px;font-family:var(--font-mono);font-size:13px;line-height:1.75;margin-top:20px;overflow:auto}
+.term .g{color:var(--term-green)}.term .c{color:var(--term-cyan)}.term .d{color:var(--term-dim)}.term .a{color:var(--term-amber)}.term .r{color:var(--term-red)}
+.login{min-height:100vh;flex:1;display:grid;place-items:center;background:radial-gradient(1200px 600px at 50% -10%,rgba(16,185,129,0.10),transparent 60%),var(--bg-app)}
+.login a{color:var(--text-accent);text-decoration:none}
+.login a:hover{color:var(--accent-hover)}
+.login__card{width:380px}
+.login__brand{display:flex;align-items:center;justify-content:center;gap:10px;font-family:var(--font-display);font-weight:800;font-size:26px;letter-spacing:-0.03em;margin-bottom:6px}
+.login__brand b{color:var(--accent)}
+.login__sub{text-align:center;color:var(--text-muted);font-size:13.5px;margin-bottom:26px}
+.fieldgap{display:flex;flex-direction:column;gap:16px}
+.divider{display:flex;align-items:center;gap:12px;color:var(--text-faint);font-size:12px;font-family:var(--font-mono);margin:20px 0}
+.divider::before,.divider::after{content:'';height:1px;background:var(--border-subtle);flex:1}
+.row-between{display:flex;align-items:center;justify-content:space-between}
+.backlink{background:none;border:none;color:var(--text-muted);font-family:var(--font-mono);font-size:13px;cursor:pointer;display:flex;align-items:center;gap:6px;padding:0}
+.backlink:hover{color:var(--text-primary)}

@@ -1,0 +1,125 @@
+/* ============================================================
+   CloudForge — component styles
+   Consumed by the React primitives in src/components/ui.
+   Class-based so hover/focus/active states work; all values
+   from tokens.
+   ============================================================ */
+
+/* ---------- Button ---------- */
+.cf-btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--space-3);font-family:var(--font-sans);font-weight:var(--fw-semibold);border:var(--border-w) solid transparent;border-radius:var(--radius-md);cursor:pointer;white-space:nowrap;text-decoration:none;transition:background var(--dur-fast) var(--ease-standard),border-color var(--dur-fast) var(--ease-standard),color var(--dur-fast) var(--ease-standard),transform var(--dur-fast) var(--ease-standard);user-select:none}
+.cf-btn:focus-visible{outline:none;box-shadow:var(--ring)}
+.cf-btn:active{transform:translateY(0.5px)}
+.cf-btn[disabled],.cf-btn[aria-disabled="true"]{opacity:0.45;cursor:not-allowed;transform:none}
+.cf-btn--sm{height:30px;padding:0 12px;font-size:var(--text-sm)}
+.cf-btn--md{height:38px;padding:0 16px;font-size:var(--text-base)}
+.cf-btn--lg{height:46px;padding:0 22px;font-size:var(--text-md)}
+.cf-btn--block{width:100%}
+.cf-btn--primary{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+.cf-btn--primary:hover{background:var(--accent-hover);border-color:var(--accent-hover)}
+.cf-btn--primary:active{background:var(--accent-active)}
+.cf-btn--secondary{background:var(--bg-elevated);color:var(--text-primary);border-color:var(--border-default)}
+.cf-btn--secondary:hover{background:var(--bg-active);border-color:var(--border-strong)}
+.cf-btn--ghost{background:transparent;color:var(--text-secondary);border-color:transparent}
+.cf-btn--ghost:hover{background:var(--bg-hover);color:var(--text-primary)}
+.cf-btn--danger{background:var(--danger);color:#fff;border-color:var(--danger)}
+.cf-btn--danger:hover{filter:brightness(1.08)}
+
+/* ---------- IconButton ---------- */
+.cf-iconbtn{display:inline-flex;align-items:center;justify-content:center;border:var(--border-w) solid transparent;border-radius:var(--radius-md);cursor:pointer;color:var(--text-muted);background:transparent;transition:background var(--dur-fast) var(--ease-standard),color var(--dur-fast) var(--ease-standard),border-color var(--dur-fast) var(--ease-standard)}
+.cf-iconbtn:hover{background:var(--bg-hover);color:var(--text-primary)}
+.cf-iconbtn:focus-visible{outline:none;box-shadow:var(--ring)}
+.cf-iconbtn[disabled]{opacity:0.45;cursor:not-allowed}
+.cf-iconbtn--sm{width:30px;height:30px}
+.cf-iconbtn--md{width:38px;height:38px}
+.cf-iconbtn--lg{width:46px;height:46px}
+.cf-iconbtn--solid{background:var(--bg-elevated);border-color:var(--border-default)}
+.cf-iconbtn--solid:hover{border-color:var(--border-strong)}
+
+/* ---------- Field / Input / Select ---------- */
+.cf-field{display:flex;flex-direction:column;gap:var(--space-3)}
+.cf-label{font-family:var(--font-sans);font-size:var(--text-sm);font-weight:var(--fw-medium);color:var(--text-secondary)}
+.cf-label__req{color:var(--danger);margin-left:2px}
+.cf-hint{font-family:var(--font-sans);font-size:var(--text-xs);color:var(--text-faint)}
+.cf-hint--error{color:var(--danger-fg)}
+.cf-input,.cf-select{width:100%;height:38px;padding:0 12px;font-family:var(--font-sans);font-size:var(--text-base);color:var(--text-primary);background:var(--bg-inset);border:var(--border-w) solid var(--border-default);border-radius:var(--radius-md);transition:border-color var(--dur-fast) var(--ease-standard),box-shadow var(--dur-fast) var(--ease-standard);box-sizing:border-box}
+.cf-input::placeholder{color:var(--text-faint)}
+.cf-input:hover,.cf-select:hover{border-color:var(--border-strong)}
+.cf-input:focus,.cf-select:focus{outline:none;border-color:var(--border-focus);box-shadow:var(--ring)}
+.cf-input--mono{font-family:var(--font-mono)}
+.cf-input--error{border-color:var(--danger)}
+.cf-input--error:focus{box-shadow:0 0 0 3px var(--danger-subtle)}
+.cf-input:disabled,.cf-select:disabled{opacity:0.5;cursor:not-allowed}
+.cf-select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238A97A6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;padding-right:34px;cursor:pointer}
+
+/* ---------- Checkbox ---------- */
+.cf-check{display:inline-flex;align-items:center;gap:var(--space-3);font-family:var(--font-sans);font-size:var(--text-base);color:var(--text-secondary);cursor:pointer;user-select:none}
+.cf-check__box{width:18px;height:18px;flex:none;border:var(--border-w-thick) solid var(--border-strong);border-radius:var(--radius-xs);background:var(--bg-inset);display:inline-flex;align-items:center;justify-content:center;transition:background var(--dur-fast) var(--ease-standard),border-color var(--dur-fast) var(--ease-standard)}
+.cf-check__box svg{opacity:0;transition:opacity var(--dur-fast)}
+.cf-check[data-checked="true"] .cf-check__box{background:var(--accent);border-color:var(--accent)}
+.cf-check[data-checked="true"] .cf-check__box svg{opacity:1}
+.cf-check:hover .cf-check__box{border-color:var(--accent)}
+.cf-check[data-disabled="true"]{opacity:0.45;cursor:not-allowed}
+
+/* ---------- Badge ---------- */
+.cf-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:var(--text-2xs);font-weight:var(--fw-semibold);letter-spacing:var(--tracking-wide);text-transform:uppercase;padding:3px 8px;border-radius:var(--radius-sm);border:var(--border-w) solid transparent;line-height:1.4;white-space:nowrap}
+.cf-badge__dot{width:6px;height:6px;border-radius:50%;flex:none;background:currentColor}
+.cf-badge--neutral{background:var(--bg-elevated);color:var(--text-muted);border-color:var(--border-default)}
+.cf-badge--accent{background:var(--accent-subtle);color:var(--text-accent);border-color:var(--accent-border)}
+.cf-badge--success{background:var(--success-subtle);color:var(--success-fg);border-color:rgba(16,185,129,0.3)}
+.cf-badge--warning{background:var(--warning-subtle);color:var(--warning-fg);border-color:rgba(245,165,36,0.3)}
+.cf-badge--danger{background:var(--danger-subtle);color:var(--danger-fg);border-color:rgba(240,68,56,0.3)}
+.cf-badge--info{background:var(--info-subtle);color:var(--info-fg);border-color:rgba(14,165,233,0.3)}
+.cf-badge--solid{border:none;color:var(--accent-fg);background:var(--accent)}
+
+/* ---------- Tag (removable) ---------- */
+.cf-tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:var(--text-xs);color:var(--text-secondary);background:var(--bg-elevated);border:var(--border-w) solid var(--border-default);border-radius:var(--radius-sm);padding:3px 6px 3px 10px}
+.cf-tag--plain{padding-right:10px}
+.cf-tag__x{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:var(--radius-xs);cursor:pointer;color:var(--text-faint);border:none;background:transparent;padding:0}
+.cf-tag__x:hover{background:var(--bg-active);color:var(--text-primary)}
+
+/* ---------- Card ---------- */
+.cf-card{background:var(--bg-surface);border:var(--border-w) solid var(--border-subtle);border-radius:var(--radius-lg);overflow:hidden}
+.cf-card--hover{transition:border-color var(--dur-normal) var(--ease-standard),transform var(--dur-normal) var(--ease-standard)}
+.cf-card--hover:hover{border-color:var(--border-strong);transform:translateY(-2px)}
+.cf-card--pad{padding:var(--space-7)}
+.cf-card__header{padding:var(--space-6) var(--space-7);border-bottom:var(--border-w) solid var(--border-subtle);display:flex;align-items:center;justify-content:space-between;gap:var(--space-4)}
+.cf-card__body{padding:var(--space-7)}
+.cf-card__footer{padding:var(--space-5) var(--space-7);border-top:var(--border-w) solid var(--border-subtle);display:flex;align-items:center;gap:var(--space-4)}
+.cf-card__title{font-family:var(--font-display);font-weight:var(--fw-semibold);font-size:var(--text-lg);color:var(--text-primary);letter-spacing:var(--tracking-snug);margin:0}
+
+/* ---------- Tabs ---------- */
+.cf-tabs{display:inline-flex;gap:2px;border-bottom:var(--border-w) solid var(--border-subtle)}
+.cf-tab{font-family:var(--font-sans);font-size:var(--text-base);font-weight:var(--fw-medium);color:var(--text-muted);background:transparent;border:none;border-bottom:2px solid transparent;padding:10px 14px;margin-bottom:-1px;cursor:pointer;transition:color var(--dur-fast) var(--ease-standard),border-color var(--dur-fast) var(--ease-standard)}
+.cf-tab:hover{color:var(--text-primary)}
+.cf-tab--active{color:var(--text-accent);border-bottom-color:var(--accent)}
+
+/* ---------- CommandBlock (terminal command w/ copy) ---------- */
+.cf-cmd{display:flex;align-items:center;gap:var(--space-4);font-family:var(--font-mono);font-size:var(--text-base);background:var(--term-bg);border:var(--border-w) solid var(--border-subtle);border-radius:var(--radius-md);padding:12px 12px 12px 16px;color:var(--term-text)}
+.cf-cmd__prompt{color:var(--emerald-400);font-weight:var(--fw-bold);flex:none;user-select:none}
+.cf-cmd__text{flex:1;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.cf-cmd__text::-webkit-scrollbar{display:none}
+.cf-cmd__copy{flex:none}
+
+/* ---------- CodeBlock ---------- */
+.cf-code{font-family:var(--font-mono);font-size:var(--text-sm);line-height:var(--lh-relaxed);background:var(--term-bg);border:var(--border-w) solid var(--border-subtle);border-radius:var(--radius-md);overflow:hidden}
+.cf-code__bar{display:flex;align-items:center;justify-content:space-between;padding:8px 12px;border-bottom:var(--border-w) solid var(--border-subtle);color:var(--text-faint);font-size:var(--text-xs)}
+.cf-code__body{padding:14px 16px;overflow-x:auto;color:var(--term-text);white-space:pre;margin:0}
+
+/* ---------- Dialog ---------- */
+.cf-dialog-overlay{position:fixed;inset:0;background:rgba(5,8,11,0.66);backdrop-filter:blur(2px);display:flex;align-items:center;justify-content:center;padding:var(--space-7);z-index:50}
+.cf-dialog{width:100%;max-width:460px;background:var(--bg-surface);border:var(--border-w) solid var(--border-default);border-radius:var(--radius-xl);box-shadow:var(--shadow-pop);overflow:hidden}
+.cf-dialog__header{padding:var(--space-7) var(--space-7) 0}
+.cf-dialog__title{font-family:var(--font-display);font-weight:var(--fw-bold);font-size:var(--text-xl);color:var(--text-primary);letter-spacing:var(--tracking-snug);margin:0}
+.cf-dialog__desc{font-family:var(--font-sans);font-size:var(--text-base);color:var(--text-muted);line-height:var(--lh-normal);margin:var(--space-4) 0 0}
+.cf-dialog__body{padding:var(--space-6) var(--space-7)}
+.cf-dialog__footer{padding:0 var(--space-7) var(--space-7);display:flex;justify-content:flex-end;gap:var(--space-4)}
+
+/* ---------- StatusDot ---------- */
+.cf-dot{display:inline-flex;align-items:center;gap:var(--space-3);font-family:var(--font-mono);font-size:var(--text-xs);color:var(--text-muted)}
+.cf-dot__i{width:8px;height:8px;border-radius:50%;flex:none;position:relative}
+.cf-dot--live .cf-dot__i{background:var(--success)}
+.cf-dot--live .cf-dot__i::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1px solid var(--success);opacity:0.5;animation:cf-ping 1.8s var(--ease-out) infinite}
+.cf-dot--idle .cf-dot__i{background:var(--text-faint)}
+.cf-dot--error .cf-dot__i{background:var(--danger)}
+.cf-dot--building .cf-dot__i{background:var(--warning)}
+@keyframes cf-ping{0%{transform:scale(0.8);opacity:0.6}100%{transform:scale(1.8);opacity:0}}

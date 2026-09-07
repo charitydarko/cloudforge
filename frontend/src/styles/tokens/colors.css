@@ -1,0 +1,142 @@
+/* ============================================================
+   CloudForge — Color tokens
+   Dark-first. Cool slate neutrals + emerald signature.
+   Calm, muted, enterprise-grade infrastructure.
+   ============================================================ */
+:root{
+  /* ---- Base: Emerald (signature) ---- */
+  --emerald-300:#6EE7B7;
+  --emerald-400:#34D399;
+  --emerald-500:#10B981; /* primary accent */
+  --emerald-600:#059669;
+  --emerald-700:#047857;
+  --emerald-800:#065F46;
+
+  /* ---- Base: Ink (cool slate neutral scale) ---- */
+  --ink-950:#0A0E12; /* app background */
+  --ink-900:#0F141A;
+  --ink-850:#141A21;
+  --ink-800:#19212A; /* surface / card */
+  --ink-750:#1F2832;
+  --ink-700:#27313D; /* border-strong / elevated */
+  --ink-600:#323E4B; /* border */
+  --ink-500:#465563;
+  --ink-400:#647383; /* faint text / disabled */
+  --ink-300:#8A97A6; /* muted text */
+  --ink-200:#B3BECB;
+  --ink-100:#D6DDE5;
+  --ink-50:#EEF2F6; /* primary text on dark */
+  --white:#FFFFFF;
+
+  /* ---- Base: Semantic hues ---- */
+  --sky-400:#38BDF8;
+  --sky-500:#0EA5E9;
+  --amber-400:#FBBF24;
+  --amber-500:#F5A524;
+  --red-400:#F97066;
+  --red-500:#F04438;
+  --violet-500:#8B5CF6;
+
+  /* ============================================================
+     SEMANTIC ALIASES — dark theme (default)
+     ============================================================ */
+  /* Surfaces */
+  --bg-app:var(--ink-950);
+  --bg-surface:var(--ink-800);
+  --bg-elevated:var(--ink-750);
+  --bg-inset:var(--ink-900);
+  --bg-hover:rgba(255,255,255,0.04);
+  --bg-active:rgba(255,255,255,0.07);
+
+  /* Borders */
+  --border-subtle:var(--ink-700);
+  --border-default:var(--ink-600);
+  --border-strong:var(--ink-500);
+  --border-focus:var(--emerald-500);
+
+  /* Text */
+  --text-primary:var(--ink-50);
+  --text-secondary:var(--ink-200);
+  --text-muted:var(--ink-300);
+  --text-faint:var(--ink-400);
+  --text-inverse:var(--ink-950);
+  --text-accent:var(--emerald-400);
+
+  /* Accent (interactive) */
+  --accent:var(--emerald-500);
+  --accent-hover:var(--emerald-400);
+  --accent-active:var(--emerald-600);
+  --accent-fg:#04231A;            /* text/icon on accent fill */
+  --accent-subtle:rgba(16,185,129,0.12);  /* tinted bg */
+  --accent-border:rgba(16,185,129,0.35);
+  --accent-ring:rgba(16,185,129,0.30);     /* focus ring */
+
+  /* Status */
+  --success:var(--emerald-500);
+  --success-fg:var(--emerald-300);
+  --success-subtle:rgba(16,185,129,0.12);
+  --warning:var(--amber-500);
+  --warning-fg:var(--amber-400);
+  --warning-subtle:rgba(245,165,36,0.14);
+  --danger:var(--red-500);
+  --danger-fg:var(--red-400);
+  --danger-subtle:rgba(240,68,56,0.14);
+  --info:var(--sky-500);
+  --info-fg:var(--sky-400);
+  --info-subtle:rgba(14,165,233,0.14);
+
+  /* Terminal (CLI output) */
+  --term-bg:#080B0E;
+  --term-text:var(--ink-100);
+  --term-dim:var(--ink-400);
+  --term-green:var(--emerald-400);
+  --term-cyan:var(--sky-400);
+  --term-amber:var(--amber-400);
+  --term-red:var(--red-400);
+}
+
+/* ============================================================
+   LIGHT THEME — for docs & marketing surfaces
+   Apply on any container: class .theme-light or [data-theme="light"]
+   ============================================================ */
+.theme-light,[data-theme="light"]{
+  --bg-app:#FBFCFD;
+  --bg-surface:#FFFFFF;
+  --bg-elevated:#FFFFFF;
+  --bg-inset:#F2F5F8;
+  --bg-hover:rgba(10,14,18,0.035);
+  --bg-active:rgba(10,14,18,0.06);
+
+  --border-subtle:#EAEEF2;
+  --border-default:#DCE2E8;
+  --border-strong:#C3CCD5;
+  --border-focus:var(--emerald-600);
+
+  --text-primary:#0F141A;
+  --text-secondary:#37424E;
+  --text-muted:#5C6A78;
+  --text-faint:#8A97A6;
+  --text-inverse:#FFFFFF;
+  --text-accent:var(--emerald-700);
+
+  --accent:var(--emerald-600);
+  --accent-hover:var(--emerald-500);
+  --accent-active:var(--emerald-700);
+  --accent-fg:#FFFFFF;
+  --accent-subtle:rgba(5,150,105,0.10);
+  --accent-border:rgba(5,150,105,0.28);
+  --accent-ring:rgba(5,150,105,0.25);
+
+  --success:var(--emerald-600);
+  --success-fg:var(--emerald-700);
+  --success-subtle:rgba(5,150,105,0.10);
+  --warning:#B7791F;
+  --warning-fg:#946300;
+  --warning-subtle:rgba(245,165,36,0.16);
+  --danger:#D92D20;
+  --danger-fg:#B42318;
+  --danger-subtle:rgba(240,68,56,0.10);
+  --info:var(--sky-500);
+  --info-fg:#0284C7;
+  --info-subtle:rgba(14,165,233,0.10);
+}

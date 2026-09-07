@@ -1,0 +1,34 @@
+/* CloudForge documentation site (light theme) — from ui_kits/docs */
+.docs{display:grid;grid-template-columns:250px 1fr 220px;min-height:100vh;flex:1;background:var(--bg-app);color:var(--text-primary)}
+.docs a{color:var(--text-accent);text-decoration:none}
+.docs a:hover{text-decoration:underline}
+.dnav{border-right:1px solid var(--border-subtle);padding:20px 16px;background:var(--bg-inset)}
+.dbrand{display:flex;align-items:center;gap:9px;font-family:var(--font-display);font-weight:800;font-size:17px;letter-spacing:-0.03em;padding:4px 8px 18px;color:var(--text-primary)}
+.docs .dbrand{color:var(--text-primary)}
+.docs .dbrand:hover{text-decoration:none;opacity:0.85}
+.dbrand b{color:var(--accent)}
+.dsearch{display:flex;align-items:center;gap:8px;border:1px solid var(--border-default);border-radius:var(--radius-md);padding:7px 10px;color:var(--text-faint);font-family:var(--font-mono);font-size:12px;margin-bottom:16px}
+.dsec{font-family:var(--font-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-faint);padding:14px 10px 6px}
+.dlink{display:block;padding:6px 10px;border-radius:var(--radius-sm);font-size:13.5px;color:var(--text-muted);cursor:pointer}
+.dlink:hover{background:var(--bg-hover);color:var(--text-primary);text-decoration:none}
+.dlink[data-active="true"]{background:var(--accent-subtle);color:var(--text-accent);font-weight:600}
+.article{padding:48px 56px;max-width:760px}
+.crumbs{font-family:var(--font-mono);font-size:12px;color:var(--text-faint);margin-bottom:14px}
+.article h1{font-family:var(--font-display);font-weight:700;font-size:36px;letter-spacing:-0.035em;margin:0 0 10px}
+.lead{font-size:17px;color:var(--text-muted);line-height:1.6;margin:0 0 28px}
+.article h2{font-family:var(--font-display);font-weight:600;font-size:22px;letter-spacing:-0.02em;margin:36px 0 12px;scroll-margin-top:20px}
+.article p{font-size:15px;color:var(--text-secondary);line-height:1.7;margin:0 0 16px}
+.article code{font-family:var(--font-mono);font-size:13px;background:var(--bg-inset);border:1px solid var(--border-subtle);border-radius:4px;padding:1px 5px;color:var(--text-primary)}
+.article .cf-code code{background:transparent;border:none;border-radius:0;padding:0;font-size:inherit;color:inherit}
+.article ol{color:var(--text-secondary);font-size:15px;line-height:1.8;padding-left:20px}
+.callout{display:flex;gap:12px;background:var(--info-subtle);border:1px solid rgba(14,165,233,.3);border-radius:var(--radius-md);padding:14px 16px;margin:20px 0;font-size:14px;color:var(--text-secondary);line-height:1.55}
+.callout svg{color:var(--info);flex:none;margin-top:2px}
+.blk{margin:20px 0}
+.toc{border-left:1px solid var(--border-subtle);padding:48px 24px;position:sticky;top:0;align-self:start}
+.toc__t{font-family:var(--font-mono);font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-faint);margin-bottom:12px}
+.toc a{display:block;font-size:13px;color:var(--text-muted);padding:4px 0}
+.pager{display:flex;justify-content:space-between;margin-top:44px;gap:16px}
+.pcard{flex:1;border:1px solid var(--border-default);border-radius:var(--radius-md);padding:14px 16px;cursor:pointer}
+.pcard:hover{border-color:var(--border-strong)}
+.pcard .k{font-family:var(--font-mono);font-size:11px;color:var(--text-faint)}
+.pcard .v{font-weight:600;font-size:14px;color:var(--text-primary);margin-top:3px}

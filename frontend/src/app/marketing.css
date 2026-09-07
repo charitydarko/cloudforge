@@ -1,0 +1,39 @@
+/* CloudForge marketing landing page (dark) — from ui_kits/marketing */
+.mk{flex:1}
+.mk a{color:var(--text-secondary);text-decoration:none}
+.mk a:hover{color:var(--text-primary)}
+.mk .wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+.mk .nav{display:flex;align-items:center;gap:28px;height:64px}
+.mk .brand{display:flex;align-items:center;gap:9px;font-family:var(--font-display);font-weight:800;font-size:18px;letter-spacing:-0.03em}
+.mk .brand b{color:var(--accent)}
+.mk .nav__links{display:flex;gap:24px;font-size:14px;font-weight:500}
+.mk .nav__r{margin-left:auto;display:flex;align-items:center;gap:14px}
+.mk .hero{text-align:center;padding:72px 0 60px;background:radial-gradient(900px 460px at 50% -8%,rgba(16,185,129,0.12),transparent 62%)}
+.mk .eyebrow{font-family:var(--font-mono);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-accent);margin-bottom:20px}
+.mk .hero h1{font-family:var(--font-display);font-weight:800;font-size:60px;line-height:1.02;letter-spacing:-0.045em;margin:0 auto;max-width:760px}
+.mk .hero h1 .accent{color:var(--accent)}
+.mk .hero p{font-size:19px;color:var(--text-muted);max-width:560px;margin:22px auto 0;line-height:1.55}
+.mk .hero__cmd{max-width:400px;margin:32px auto 0}
+.mk .hero__cta{display:flex;gap:14px;justify-content:center;margin-top:24px}
+.mk .hero__note{font-family:var(--font-mono);font-size:12px;color:var(--text-faint);margin-top:22px}
+.mk .section{padding:64px 0}
+.mk .section__head{text-align:center;margin-bottom:44px}
+.mk .section__head h2{font-family:var(--font-display);font-weight:700;font-size:34px;letter-spacing:-0.035em;margin:0}
+.mk .section__head p{color:var(--text-muted);font-size:16px;margin:12px auto 0;max-width:520px}
+.mk .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.mk .feat{background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:26px}
+.mk .feat__i{width:40px;height:40px;border-radius:var(--radius-md);background:var(--accent-subtle);color:var(--text-accent);display:grid;place-items:center;margin-bottom:16px}
+.mk .feat h3{font-family:var(--font-display);font-weight:600;font-size:17px;margin:0 0 8px;letter-spacing:-0.02em}
+.mk .feat p{color:var(--text-muted);font-size:14px;line-height:1.6;margin:0}
+.mk .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border-subtle);border-radius:var(--radius-xl);overflow:hidden}
+.mk .step{padding:30px;border-right:1px solid var(--border-subtle)}
+.mk .step:last-child{border-right:0}
+.mk .step__n{font-family:var(--font-mono);font-size:12px;color:var(--accent);font-weight:700}
+.mk .step h4{font-family:var(--font-display);font-size:17px;font-weight:600;margin:12px 0 8px;letter-spacing:-0.02em}
+.mk .step p{color:var(--text-muted);font-size:13.5px;line-height:1.55;margin:0}
+.mk .cta{text-align:center;background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:var(--radius-xl);padding:56px 32px;margin:20px 0 64px}
+.mk .cta h2{font-family:var(--font-display);font-weight:800;font-size:38px;letter-spacing:-0.04em;margin:0}
+.mk .cta p{color:var(--text-muted);font-size:16px;margin:14px 0 28px}
+.mk .foot{border-top:1px solid var(--border-subtle);padding:36px 0;display:flex;align-items:center;gap:20px;font-size:13px;color:var(--text-faint)}
+.mk .foot__links{margin-left:auto;display:flex;gap:22px}
+.mk .pills{display:flex;gap:10px;justify-content:center;margin-top:28px;flex-wrap:wrap}

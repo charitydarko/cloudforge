@@ -8,8 +8,8 @@ Built in public across 6 episodes of the "Building CloudForge" series. Every epi
 
 - **Episode 1** — AWS Security Foundation ✅
 - **Bonus Episode 2A** — Building the Dashboard Frontend with AI ✅
-- **Episode 2** — Deploy Frontend to AWS ← current
-- **Episode 3** — Deploy API Backend
+- **Episode 2** — Deploy Frontend to AWS ✅
+- **Episode 3** — Deploy API Backend ← current
 - **Episode 4** — Production Database with RDS
 - **Episode 5** — Observability
 - **Episode 6** — Infrastructure as Code (Terraform Capstone)

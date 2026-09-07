@@ -1,0 +1,20 @@
+{
+  "name": "cloudforge-backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "CloudForge API",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.19.0",
+    "typescript": "^5.6.3"
+  }
+}

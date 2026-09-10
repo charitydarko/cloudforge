@@ -1,0 +1,18 @@
+# Caddy config for the CloudForge API host.
+# CADDY_DOMAIN and CADDY_ACME_EMAIL are injected from the environment by compose.
+
+{
+	email {$CADDY_ACME_EMAIL}
+}
+
+{$CADDY_DOMAIN} {
+	encode gzip zstd
+
+	# Proxy to the API by its compose service name on the internal network.
+	reverse_proxy api:3000
+
+	log {
+		output stdout
+		format json
+	}
+}

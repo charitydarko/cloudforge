@@ -1,17 +1,63 @@
+# Single-host deployment: Caddy terminates HTTPS on 80/443 and reverse-proxies
+# to the API over the internal compose network. Only Caddy publishes host ports.
+#
+# Required host-side env (see .env.example): CADDY_DOMAIN, CADDY_ACME_EMAIL
+
+x-logging: &bounded-logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
 services:
   api:
     build: .
     image: cloudforge-api:latest
     container_name: cloudforge-api
-    ports:
-      - "3000:3000"
+    # Not published to the host — reachable only from Caddy on the internal network.
+    expose:
+      - "3000"
     environment:
       - NODE_ENV=production
       - PORT=3000
     restart: unless-stopped
+    logging: *bounded-logging
+    networks:
+      - web
     healthcheck:
       test: ["CMD", "node", "-e", "fetch('http://localhost:3000/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
       interval: 30s
       timeout: 3s
       start_period: 5s
       retries: 3
+
+  caddy:
+    image: caddy:2
+    container_name: cloudforge-caddy
+    # The ONLY service that publishes ports to the host.
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp" # HTTP/3
+    environment:
+      - CADDY_DOMAIN=${CADDY_DOMAIN:?set CADDY_DOMAIN, e.g. api.example.com}
+      - CADDY_ACME_EMAIL=${CADDY_ACME_EMAIL:?set CADDY_ACME_EMAIL for Let's Encrypt}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data     # TLS certs + ACME account; must survive rebuilds
+      - caddy_config:/config
+    restart: unless-stopped
+    logging: *bounded-logging
+    networks:
+      - web
+    depends_on:
+      api:
+        condition: service_healthy
+
+volumes:
+  caddy_data:
+  caddy_config:
+
+networks:
+  web:
+    name: cloudforge_web
